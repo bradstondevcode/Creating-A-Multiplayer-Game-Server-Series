@@ -23,7 +23,7 @@ wss.on('connection', function connection(client){
 	var currentClient = playersData[""+client.id]
 
 	//Send default client data back to client for reference
-	client.send(`{"id": "${client.id}"`)
+	client.send(`{"id": "${client.id}"}`)
 
 	//Method retrieves message from client
 	client.on('message', (data) => {
